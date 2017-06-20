@@ -1,0 +1,73 @@
+\chapter{JSOUP API}
+\vspace{1cm}
+Jsoup este o librărie Java pentru lucrul cu elemente specifice HTML, cuprinzând metode speciale pentru a manipula datele utilizând cele mai populare metode DOM, CSS si jquery.\newline
+Jsoup :
+\begin{itemize}
+	\item găsește și extrage date utilizâd DOM\footnote{Document Object Model (DOM) este o convenție cross-platform și independentă de limbajul utilizat, folosită pentru reprezentarea și interacționarea cu obiecte în documente HTML, XHTML, și XML.\cite{16}} traversal sau selectori CSS\footnote{Cascading Style Sheets (CSS) este un limbaj de stil utilizat pentru design-ul și formatarea unui document scris într-un limbaj markup.}
+	\item parsează pagini HTML prin intermediul URL-ului, a unui fișier HTML sau a unui string.
+	\item manipulează elementele HTML, atributele și textul.
+	\item curăță conținutul prezentat de utilizatori utilizănd o listă albă pentru a preveni XSS\footnote{Cross-site scripting (XSS) este un tip de vulnerabilitate a securității unui computer, în general găsită în aplicațiile Web. }
+	\item datele de ieșire reprezintă HTML ordonat
+	\item jsoup este proiectat să se ocupe de toate tipurile de HTML care există; de la curat și valid, la taguri-soup invalide; jsoup va crea un arbore de parsare sensibil.
+\end{itemize}\newpage
+\begin{exmp} Exemplu de utilizare a API-ului jsoup\newline
+Descarcă pagina Wikipedia, o parseaza ca un DOM și selectează titlurile din sectiunea de stiri intr-o lista de Elements:\newline
+Document doc = Jsoup.connect("http://en.wikipedia.org/").get();\newline
+Elements newsHeadlines = doc.select("\#mp-itn b a");\newline
+\end{exmp}
+\textbf{Open source}\newline
+Jsoup este un proiect open source distribuit sub licența MIT\footnote{Licența MIT este o licență gratuită având originea la Insitutul de Tehnologie din Massachusetts \cite{17} }. Codul sursă este disponibil pe GitHub.\newline
+
+Pentru a utiliza jsoup, trebuie descărcată arhiva jar utilizând url-ul https://jsoup.org/download, versiunea 1.8.2.\newline
+Aceasta trebuie dezarhivată și importată în proiectul în care umrează să fie folosit.\newline
+
+Dacă se utilizează \textbf{Maven \footnote{Maven este un instrument automat utilizat în general în proiectele Java. Maven descarcă dinamic librării Java și plug-in-uri Maven din unul sau mai multe depozite precum Maven 2 Central Repository, și le stochează în cache-ul local.}} pentru a manageria dependențele dintr-un proiect Java(lucru recomandat), nu este nevoie să descărcăm arhiva jar, ci este suficient să punem următoarea bucată de cod în fișierul POM, secțiunea <dependencies>: \newline
+
+<dependency>\newline
+  <!-- jsoup HTML parser library @ http://jsoup.org/ -->\newline
+  <groupId>org.jsoup</groupId>\newline
+  <artifactId>jsoup</artifactId>\newline
+  <version>1.8.2</version>\newline
+</dependency>\newline
+
+\textbf{Dependințe}\newline
+Jsoup nu are dependințe.\newline
+
+Jsoup rulează cu Java începând de la versiunea 1.5, cu Scala, Android, OSGi și Google App Engine.\newline
+
+Pentru a învăța cum se utilizează librăria jsoup este recomandat să parcurgem Cookbook-ul care se găsește pe https://jsoup.org/cookbook/ care cuprinde:\cite{18}\newline
+\textbf{Introducere}
+\begin{enumerate}
+	\item Parsarea și parcurgerea unui Document
+\end{enumerate}
+\newpage
+\textbf{Input}
+\begin{enumerate}
+	\item Parsarea unui document preluat dintr-un String
+	\item Încărcarea unui Document printr-un URL
+	\item Încărcarea unui Document dintr-un fișier
+\end{enumerate}
+
+\textbf{Extragerea de date}
+\begin{enumerate}
+	\item Utilizarea de metode DOM pentru a naviga într-un document
+	\item Utilizarea de selectori sintactici pentru a căuta elemente
+	\item Extragerea de atribute, text și HTML din elemente		
+	\item Lucrul cu URL-uri
+	\item Un exemplu de program - printarea unor link-uri
+\end{enumerate}
+
+\textbf{Modificarea datelor}
+\begin{enumerate}
+	\item Setarea valorilor unor atribute
+	\item Setarea HTML pentru un element
+	\item	Setarea conținutului text al elementelor
+\end{enumerate}
+
+\textbf{Curățarea HTML}
+\begin{enumerate}
+	\item Eliminarea surselor HTML nesigure pentru prevenirea XSS
+\end{enumerate}
+
+\textbf{Try jsoup}\newline
+Try jsoup este un demo online, interactiv care permite vizualizarea parsării unui HTML într-un DOM și testarea interogărilor CSS.

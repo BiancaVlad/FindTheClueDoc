@@ -1,0 +1,13 @@
+\select@language {romanian}
+\contentsline {chapter}{\numberline {1}Introducere}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Scurt\IeC {\u a} prezentare a aplica\IeC {{\textcommabelow t}}iei}{5}{section.1.1}
+\contentsline {paragraph}{ }{5}{section*.2}
+\contentsline {section}{\numberline {1.2}De ce Android?}{6}{section.1.2}
+\contentsline {paragraph}{ }{6}{section*.3}
+\contentsline {chapter}{\numberline {2}Platforma Android}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Istoric}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Arhitectura platformei}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Linux Kernel}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Native Libraries}{13}{section.2.4}
+\contentsline {section}{\numberline {2.5}Android Runtimes}{13}{section.2.5}
+\contentsline {section}{\numberline {2.6}Android Applications}{14}{section.2.6}
